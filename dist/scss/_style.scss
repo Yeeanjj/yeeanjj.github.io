@@ -1,0 +1,552 @@
+@font-face {
+  font-family: "LeeSeoyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.maininfo {
+  position: relative;
+  padding: 100px 0;
+  .infotext {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 9.375rem;
+    font-family: "Giants-Inline";
+    color: #000;
+  }
+  .imginfo {
+    width: 70%;
+    margin: 0 auto;
+    img {
+      animation: point 2s both;
+    }
+  }
+  @keyframes point {
+    0% {
+      transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .maininfo {
+    .infotext {
+      font-size: 85px;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .maininfo {
+    .infotext {
+      font-size: 110px;
+    }
+  }
+}
+.profilewrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .profileimg {
+    position: relative;
+    width: 20%;
+    height: 56%;
+    margin-right: 10%;
+  }
+  .profileinfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    li {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      display: block;
+    }
+    .infoday {
+      margin-right: 10px;
+      opacity: 0.7;
+    }
+    .title {
+      font-size: 1.875rem;
+      font-family: "Giants-Inline";
+      margin-bottom: 10px;
+    }
+    .about_tit {
+      color: #c2a7de;
+    }
+    .education_tit {
+      color: #fefcef;
+    }
+    // .license_tit {
+    //   color: #e8fba9;
+    // }
+    .profiletext {
+      font-size: 1.25rem;
+    }
+    .name {
+      font-size: 50px;
+      font-family: "LeeSeoyun";
+    }
+    .day {
+      opacity: 0.7;
+    }
+  }
+  .skill {
+    .skill_tit {
+      margin-right: 25px;
+
+      color: #e8fba9;
+    }
+    .skills {
+      display: flex;
+      li {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      svg {
+        width: 50px;
+        height: 40px;
+      }
+    }
+  }
+  .pointwrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .pointlist {
+      display: block;
+      font-size: 30px;
+      font-family: "LeeSeoyun";
+      padding: 10px;
+      color: #fff;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .profilewrap {
+    .profileinfo {
+      .profiletext {
+        font-size: 18px;
+      }
+      .name {
+        font-size: 40px;
+      }
+    }
+    .pointwrap {
+      .pointlist {
+        font-size: 24px;
+      }
+    }
+  }
+}
+.scroll_Festar,
+.scroll_SoundWave,
+.scroll_Lazuli {
+  position: relative;
+}
+.desktop {
+  position: relative;
+  width: 48%;
+  margin-left: 3%;
+  .festarbox {
+    position: absolute;
+    top: 5.5%;
+    left: 11.5%;
+    width: 77.8%;
+    height: 82%;
+    background: url(../../images/portfolio_Festar.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: all 4.5s;
+    &:hover {
+      background-position: bottom;
+    }
+  }
+  .soundbox {
+    position: absolute;
+    top: 5.5%;
+    left: 11.5%;
+    width: 77.8%;
+    height: 82%;
+    background: url(../../images/portfolio_suondwave.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: all 4.5s;
+    &:hover {
+      background-position: bottom;
+    }
+  }
+}
+.phon {
+  position: relative;
+  width: 18%;
+  margin-left: 20%;
+  .lazulibox {
+    position: absolute;
+    top: 0.9%;
+    left: 2.4%;
+    width: 95%;
+    height: 98%;
+    background: url(../../images/portfolio_lazuli.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50px;
+    transition: all 6s;
+    // transform: scale(0.9);
+    &:hover {
+      background-position: bottom;
+    }
+  }
+  .ihpn2 {
+    position: absolute;
+    top: 1.8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .phon {
+    .lazulibox {
+      border-radius: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .phon {
+    .lazulibox {
+      border-radius: 30px;
+    }
+  }
+}
+.portinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  width: 35%;
+}
+@media screen and (max-width: 1024px) {
+  .portinfo {
+    gap: 20px;
+  }
+}
+.type {
+  font-size: 1.75rem;
+  font-family: "Giants-Inline";
+  color: #c2a7de;
+}
+.type-two {
+  position: relative;
+  color: #fefcef;
+}
+.type-th {
+  position: relative;
+  color: #32abdf;
+}
+.porttit {
+  font-size: 3.125rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+  .porttit {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .porttit {
+    font-size: 42px;
+  }
+}
+.boxlst {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  .boxtit {
+    width: 90px;
+    font-size: 1.25rem;
+    font-family: "Giants-Inline";
+    margin-right: 15px;
+  }
+  .boxtxt {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .boxlst {
+    .boxtit {
+      font-size: 18px;
+    }
+    .boxtxt {
+      font-size: 16px;
+    }
+    .lazulitxt {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .boxlst {
+    .lazulitxt {
+      width: 80%;
+    }
+  }
+}
+.boxtxtwrap {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 30px;
+  opacity: 0.8;
+}
+@media screen and (max-width: 1024px) {
+  .boxtxtwrap {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+.togowrap {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .porttogo_list {
+    display: block;
+    margin-right: 15px;
+    a {
+      display: block;
+      width: 110px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-family: "Giants-Inline";
+      text-align: center;
+      color: #c2a7de;
+      transition: all 0.5s;
+      border-radius: 10px;
+      &:hover {
+        color: #fff;
+        background: #c2a7de;
+      }
+    }
+  }
+}
+.togosound {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .porttogo_list {
+    display: block;
+    margin-right: 15px;
+    a {
+      display: block;
+      width: 110px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-family: "Giants-Inline";
+      text-align: center;
+      color: #fefcef;
+      transition: all 0.5s;
+      border-radius: 10px;
+      &:hover {
+        color: #222;
+        background: #fefcef;
+      }
+    }
+  }
+}
+.togolazuli {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .porttogo_list {
+    display: block;
+    margin-right: 15px;
+    a {
+      display: block;
+      width: 110px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-family: "Giants-Inline";
+      text-align: center;
+      color: #32abdf;
+      transition: all 0.5s;
+      border-radius: 10px;
+      &:hover {
+        color: #fff;
+        background: #32abdf;
+      }
+    }
+  }
+}
+.contact {
+  position: relative;
+  .conimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .card {
+      width: 15%;
+      height: 350px;
+      line-height: 350px;
+    }
+    .conimgtxt {
+      font-size: 55px;
+      font-family: "LeeSeoyun";
+      margin-top: 25px;
+    }
+  }
+  .contactwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .conlist {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .email {
+        position: relative;
+        &::before {
+          display: block;
+          content: "\e158";
+          font-size: 80px;
+          font-family: "Material Symbols Outlined";
+          color: #fff;
+        }
+        .email_hover {
+          display: none;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          font-size: 1.875rem;
+          font-family: "LeeSeoyun";
+        }
+        &:hover {
+          &::before {
+            z-index: -1;
+            color: #000;
+          }
+          .email_hover {
+            display: block;
+          }
+        }
+      }
+      .my-git {
+        width: 80px;
+        height: 20%;
+        a {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .con_copwrap {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    color: #999;
+    text-align: center;
+    .barcode-canvas {
+      width: 475px;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact {
+    .conimg {
+      margin-bottom: 15px;
+      .card {
+        width: 25%;
+      }
+      .conimgtxt {
+        font-size: 45px;
+      }
+    }
+    .con_copwrap {
+      .barcode-canvas {
+        width: 300px;
+      }
+      .conlist {
+        .email {
+          &::before {
+            font-size: 60px;
+          }
+          .email_hover {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contact {
+    .conimg {
+      // margin-bottom: 15px;
+      .card {
+        width: 20%;
+      }
+    }
+    .contactwrap {
+      .conlist {
+        .my-git {
+          .gitimg {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+    .con_copwrap {
+      .barcode-canvas {
+        width: 400px;
+      }
+    }
+  }
+}

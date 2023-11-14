@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import "reset";
+
+@font-face {
+  font-family: "Giants-Inline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+img {
+  display: block;
+  width: 100%;
+}
+span {
+  display: block;
+}
+.section {
+  height: 100vh;
+}
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  // box-shadow: 0 0 2px 0 #fff;
+  .logo {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 1.5%;
+    width: 20%;
+    margin-top: 15px;
+    a {
+      display: block;
+      .logotxt {
+        position: absolute;
+        top: -7%;
+        left: 0;
+        display: block;
+        font-size: 30px;
+        font-family: "Giants-Inline";
+        width: 100%;
+        background: linear-gradient(
+          to right top,
+          #56e7f2,
+          #c2a7de,
+          #e8fba9,
+          #32abdf,
+          #fefcef
+        );
+        color: transparent;
+        -webkit-background-clip: text;
+      }
+    }
+  }
+  .day_year {
+    padding: 1% 2%;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    font-family: "Giants-Inline";
+    background: linear-gradient(
+      to right,
+      #56e7f2,
+      #c2a7de,
+      #e8fba9,
+      #32abdf,
+      #fefcef
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+#fp-nav {
+  ul {
+    li {
+      width: 20px;
+      height: 20px;
+      a {
+        &.active {
+          span {
+            background: url(../../images/Asset3.png) no-repeat 0 0;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            margin: -10px 0 0 -10px;
+            animation: rotate 4s infinite linear;
+          }
+        }
+      }
+      .fp-right {
+        font-size: 20px;
+        margin-right: 10px;
+        font-family: "LeeSeoyun";
+      }
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(365deg);
+  }
+}
+
+.fp-watermark {
+  display: none;
+}
+
+[data-cursor] {
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url(../../images/favicon.png) no-repeat;
+  background-size: cover;
+  mix-blend-mode: difference;
+  transition: 0.25s linear;
+  pointer-events: none;
+}
+@import "style";

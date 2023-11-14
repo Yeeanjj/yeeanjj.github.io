@@ -1,0 +1,901 @@
+@charset "UTF-8";
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+header,
+main,
+footer,
+aricle {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+body {
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "pretendard", "NotoSansKR", sans-serif;
+  color: #222;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url() no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+@font-face {
+  font-family: "Giants-Inline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #000;
+  color: #fff;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span {
+  display: block;
+}
+
+.section {
+  height: 100vh;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+#header .logo {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 1.5%;
+  width: 20%;
+  margin-top: 15px;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo a .logotxt {
+  position: absolute;
+  top: -7%;
+  left: 0;
+  display: block;
+  font-size: 30px;
+  font-family: "Giants-Inline";
+  width: 100%;
+  background: linear-gradient(to right top, #56e7f2, #c2a7de, #e8fba9, #32abdf, #fefcef);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+#header .day_year {
+  padding: 1% 2%;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: right;
+  font-family: "Giants-Inline";
+  background: linear-gradient(to right, #56e7f2, #c2a7de, #e8fba9, #32abdf, #fefcef);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#fp-nav ul li {
+  width: 20px;
+  height: 20px;
+}
+#fp-nav ul li a.active span {
+  background: url(../../images/Asset3.png) no-repeat 0 0;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0 0 -10px;
+  animation: rotate 4s infinite linear;
+}
+#fp-nav ul li .fp-right {
+  font-size: 20px;
+  margin-right: 10px;
+  font-family: "LeeSeoyun";
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(365deg);
+  }
+}
+.fp-watermark {
+  display: none;
+}
+
+[data-cursor] {
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url(../../images/favicon.png) no-repeat;
+  background-size: cover;
+  mix-blend-mode: difference;
+  transition: 0.25s linear;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "LeeSeoyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.maininfo {
+  position: relative;
+  padding: 100px 0;
+}
+.maininfo .infotext {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 9.375rem;
+  font-family: "Giants-Inline";
+  color: #000;
+}
+.maininfo .imginfo {
+  width: 70%;
+  margin: 0 auto;
+}
+.maininfo .imginfo img {
+  animation: point 2s both;
+}
+@keyframes point {
+  0% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .maininfo .infotext {
+    font-size: 85px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .maininfo .infotext {
+    font-size: 110px;
+  }
+}
+.profilewrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilewrap .profileimg {
+  position: relative;
+  width: 20%;
+  height: 56%;
+  margin-right: 10%;
+}
+.profilewrap .profileinfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+.profilewrap .profileinfo li {
+  display: flex;
+  align-items: center;
+}
+.profilewrap .profileinfo span {
+  display: block;
+}
+.profilewrap .profileinfo .infoday {
+  margin-right: 10px;
+  opacity: 0.7;
+}
+.profilewrap .profileinfo .title {
+  font-size: 1.875rem;
+  font-family: "Giants-Inline";
+  margin-bottom: 10px;
+}
+.profilewrap .profileinfo .about_tit {
+  color: #c2a7de;
+}
+.profilewrap .profileinfo .education_tit {
+  color: #fefcef;
+}
+.profilewrap .profileinfo .profiletext {
+  font-size: 1.25rem;
+}
+.profilewrap .profileinfo .name {
+  font-size: 50px;
+  font-family: "LeeSeoyun";
+}
+.profilewrap .profileinfo .day {
+  opacity: 0.7;
+}
+.profilewrap .skill .skill_tit {
+  margin-right: 25px;
+  color: #e8fba9;
+}
+.profilewrap .skill .skills {
+  display: flex;
+}
+.profilewrap .skill .skills li {
+  margin-right: 15px;
+}
+.profilewrap .skill .skills li:last-child {
+  margin-right: 0;
+}
+.profilewrap .skill .skills svg {
+  width: 50px;
+  height: 40px;
+}
+.profilewrap .pointwrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.profilewrap .pointwrap .pointlist {
+  display: block;
+  font-size: 30px;
+  font-family: "LeeSeoyun";
+  padding: 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .profilewrap .profileinfo .profiletext {
+    font-size: 18px;
+  }
+  .profilewrap .profileinfo .name {
+    font-size: 40px;
+  }
+  .profilewrap .pointwrap .pointlist {
+    font-size: 24px;
+  }
+}
+.scroll_Festar,
+.scroll_SoundWave,
+.scroll_Lazuli {
+  position: relative;
+}
+
+.desktop {
+  position: relative;
+  width: 48%;
+  margin-left: 3%;
+}
+.desktop .festarbox {
+  position: absolute;
+  top: 5.5%;
+  left: 11.5%;
+  width: 77.8%;
+  height: 82%;
+  background: url(../../images/portfolio_Festar.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  transition: all 4.5s;
+}
+.desktop .festarbox:hover {
+  background-position: bottom;
+}
+.desktop .soundbox {
+  position: absolute;
+  top: 5.5%;
+  left: 11.5%;
+  width: 77.8%;
+  height: 82%;
+  background: url(../../images/portfolio_suondwave.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  transition: all 4.5s;
+}
+.desktop .soundbox:hover {
+  background-position: bottom;
+}
+
+.phon {
+  position: relative;
+  width: 18%;
+  margin-left: 20%;
+}
+.phon .lazulibox {
+  position: absolute;
+  top: 0.9%;
+  left: 2.4%;
+  width: 95%;
+  height: 98%;
+  background: url(../../images/portfolio_lazuli.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 50px;
+  transition: all 6s;
+}
+.phon .lazulibox:hover {
+  background-position: bottom;
+}
+.phon .ihpn2 {
+  position: absolute;
+  top: 1.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+}
+
+@media screen and (max-width: 1024px) {
+  .phon .lazulibox {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .phon .lazulibox {
+    border-radius: 30px;
+  }
+}
+.portinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  width: 35%;
+}
+
+@media screen and (max-width: 1024px) {
+  .portinfo {
+    gap: 20px;
+  }
+}
+.type {
+  font-size: 1.75rem;
+  font-family: "Giants-Inline";
+  color: #c2a7de;
+}
+
+.type-two {
+  position: relative;
+  color: #fefcef;
+}
+
+.type-th {
+  position: relative;
+  color: #32abdf;
+}
+
+.porttit {
+  font-size: 3.125rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  .porttit {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .porttit {
+    font-size: 42px;
+  }
+}
+.boxlst {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.boxlst .boxtit {
+  width: 90px;
+  font-size: 1.25rem;
+  font-family: "Giants-Inline";
+  margin-right: 15px;
+}
+.boxlst .boxtxt {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .boxlst .boxtit {
+    font-size: 18px;
+  }
+  .boxlst .boxtxt {
+    font-size: 16px;
+  }
+  .boxlst .lazulitxt {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .boxlst .lazulitxt {
+    width: 80%;
+  }
+}
+.boxtxtwrap {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 30px;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .boxtxtwrap {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+.togowrap {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.togowrap .porttogo_list {
+  display: block;
+  margin-right: 15px;
+}
+.togowrap .porttogo_list a {
+  display: block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Giants-Inline";
+  text-align: center;
+  color: #c2a7de;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.togowrap .porttogo_list a:hover {
+  color: #fff;
+  background: #c2a7de;
+}
+
+.togosound {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.togosound .porttogo_list {
+  display: block;
+  margin-right: 15px;
+}
+.togosound .porttogo_list a {
+  display: block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Giants-Inline";
+  text-align: center;
+  color: #fefcef;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.togosound .porttogo_list a:hover {
+  color: #222;
+  background: #fefcef;
+}
+
+.togolazuli {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.togolazuli .porttogo_list {
+  display: block;
+  margin-right: 15px;
+}
+.togolazuli .porttogo_list a {
+  display: block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Giants-Inline";
+  text-align: center;
+  color: #32abdf;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.togolazuli .porttogo_list a:hover {
+  color: #fff;
+  background: #32abdf;
+}
+
+.contact {
+  position: relative;
+}
+.contact .conimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.contact .conimg .card {
+  width: 15%;
+  height: 350px;
+  line-height: 350px;
+}
+.contact .conimg .conimgtxt {
+  font-size: 55px;
+  font-family: "LeeSeoyun";
+  margin-top: 25px;
+}
+.contact .contactwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contactwrap .conlist {
+  margin-right: 50px;
+}
+.contact .contactwrap .conlist:last-child {
+  margin-right: 0;
+}
+.contact .contactwrap .conlist .email {
+  position: relative;
+}
+.contact .contactwrap .conlist .email::before {
+  display: block;
+  content: "\e158";
+  font-size: 80px;
+  font-family: "Material Symbols Outlined";
+  color: #fff;
+}
+.contact .contactwrap .conlist .email .email_hover {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 1.875rem;
+  font-family: "LeeSeoyun";
+}
+.contact .contactwrap .conlist .email:hover::before {
+  z-index: -1;
+  color: #000;
+}
+.contact .contactwrap .conlist .email:hover .email_hover {
+  display: block;
+}
+.contact .contactwrap .conlist .my-git {
+  width: 80px;
+  height: 20%;
+}
+.contact .contactwrap .conlist .my-git a {
+  display: block;
+  width: 100%;
+}
+.contact .con_copwrap {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  color: #999;
+  text-align: center;
+}
+.contact .con_copwrap .barcode-canvas {
+  width: 475px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact .conimg {
+    margin-bottom: 15px;
+  }
+  .contact .conimg .card {
+    width: 25%;
+  }
+  .contact .conimg .conimgtxt {
+    font-size: 45px;
+  }
+  .contact .con_copwrap .barcode-canvas {
+    width: 300px;
+  }
+  .contact .con_copwrap .conlist .email::before {
+    font-size: 60px;
+  }
+  .contact .con_copwrap .conlist .email .email_hover {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contact .conimg .card {
+    width: 20%;
+  }
+  .contact .contactwrap .conlist .my-git .gitimg {
+    width: 70px;
+    height: 70px;
+  }
+  .contact .con_copwrap .barcode-canvas {
+    width: 400px;
+  }
+}/*# sourceMappingURL=comm.css.map */
